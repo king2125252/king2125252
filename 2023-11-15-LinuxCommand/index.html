@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Linux 指令 | 
+	 
+	Jack&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="Jack&#39;s Blog" />
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">Jack's Blog</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='https://github.com/king2125252/Blog' class="menu-item-link" target="_blank">
+            Blog
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/king2125252' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file active">
+									<a href="/2023-11-15-LinuxCommand/">
+                     
+										    Linux 指令
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	Linux 指令
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>Jack Zhu</span>
+	<span>2023-11-15 00:00:00</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+            
+                <span>
+                    <i class="fa fa-tag" aria-hidden="true">
+                    <a href="/tags/Linux/">Linux</a>
+                    </i>
+                </span>
+            
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<h1>Linux指令</h1>
+<h2 id="什麼是ISO光碟映像檔？">什麼是ISO光碟映像檔？</h2>
+<ul>
+<li>linux 所有的磁碟空間，最上層是(/)根目錄</li>
+<li>核心檔案的放置位置/boot</li>
+<li>swap是當我們記憶體不夠用的時候，把磁碟拿出來模擬記憶體用的分割區，至少要有一個分割區swap</li>
+</ul>
+<h2 id="建置linux步驟">建置linux步驟</h2>
+<p>1.時區的選擇<br>
+2.軟體的選擇(如果沒選擇到，之後也可以額外載入)<br>
+3.安裝目的地，磁碟區的分割</p>
+<ol>
+<li>根目錄/ 13G</li>
+<li>/var   4G</li>
+<li>/boot  1G</li>
+<li>swap   2G</li>
+<li>total  20G</li>
+</ol>
+<h2 id="使用者">使用者</h2>
+<blockquote>
+<p>root 最高權限</p>
+</blockquote>
+<ul>
+<li>通常我們不會以最高權限來使用linux，所以創建一個用戶，用來平常的使用。</li>
+</ul>
+<h2 id="linux-指令">linux 指令</h2>
+<h3 id="1-ifconfig-ip-a">1. ifconfig / ip a</h3>
+<ul>
+<li>了解目前linux網路的狀況，可以看到ip</li>
+</ul>
+<h3 id="遠端連線linux機器">遠端連線linux機器</h3>
+<ul>
+<li>Mac在終端機輸入</li>
+</ul>
+<blockquote>
+<p>ssh username@ip</p>
+</blockquote>
+<ul>
+<li>windows</li>
+</ul>
+<blockquote>
+<p>下載PieTTY</p>
+</blockquote>
+<h2 id="linux開機流程">linux開機流程</h2>
+<h2 id="linux指令操作">linux指令操作</h2>
+<ul>
+<li>[jack@localhost ~]$ [root@localhost ~]#</li>
+</ul>
+<ol>
+<li>最後面的＄號:代表一般使用者，#號:代表超級使用者</li>
+<li>jack是使用者</li>
+<li>＠後面是主機的命名</li>
+<li>~ :代表 家目錄</li>
+</ol>
+<h3 id="pwd">pwd</h3>
+<ul>
+<li>查看自己在哪裡</li>
+</ul>
+<h3 id="su">su -</h3>
+<ul>
+<li>轉換超級使用者(ex : root)</li>
+<li>su = super user</li>
+<li>環境變數會改變</li>
+</ul>
+<h3 id="su-2">su</h3>
+<ul>
+<li>也是轉換超級使用者(ex : root)</li>
+<li>但是跟su - 不同的是，環境變數不會改變</li>
+<li>可以用echo $PATH看看</li>
+</ul>
+<h3 id="whoami-我是誰">whoami 我是誰</h3>
+<ul>
+<li>return 現在的使用者</li>
+</ul>
+<h3 id="clear">clear</h3>
+<ul>
+<li>清除console</li>
+<li>等於 快捷鍵 control+L</li>
+</ul>
+<h2 id="資料夾相關">資料夾相關</h2>
+<h3 id="cd-…">cd …</h3>
+<ul>
+<li>… : 比現在的，上一層(相對位置)</li>
+</ul>
+<h3 id="cd-home-jack">cd /home/jack</h3>
+<ul>
+<li>絕對位置</li>
+</ul>
+<h3 id="cd">cd ~</h3>
+<ul>
+<li>回到家目錄 絕對位置</li>
+</ul>
+<h3 id="ls">ls</h3>
+<ul>
+<li>會列出目前所在位置下的，資料夾</li>
+</ul>
+<h3 id="ls-l">ls -l</h3>
+<ul>
+<li>會列出目前所在位置下的，資料夾</li>
+<li>但是會列出比較詳細的資料</li>
+</ul>
+<h3 id="ls-a">ls -a</h3>
+<ul>
+<li>a == all</li>
+<li>會列出所有的檔案，包括隱藏的檔案</li>
+</ul>
+<h3 id="ls-al-or-la">ls -al or -la</h3>
+<ul>
+<li>等於說將 ls -a 加上 ls -l的效果</li>
+<li>會列出所有的檔案，包括隱藏的檔案</li>
+<li>並且會列出所有的詳細資料</li>
+</ul>
+<h3 id="ls-xxx-後面都可以加上路徑">ls xxx 後面都可以加上路徑</h3>
+<ul>
+<li>加上什麼路徑，就是去看那邊的資料夾狀況</li>
+</ul>
+<h3 id="w">w</h3>
+<ul>
+<li>查看線上有多少人</li>
+</ul>
+<h3 id="who">who</h3>
+<ul>
+<li>也是查看線上有多少人，只是顯示的方式不太一樣</li>
+</ul>
+<h3 id="shutdown">shutdown</h3>
+<ul>
+<li>shutdown關機</li>
+<li>shutdown -h 馬上關機 h = halt</li>
+<li>shutdown -h 10 延遲10分鐘後關機</li>
+<li>shutdown -h 10 ‘字串’，可以告知其他使用者，你想說的</li>
+<li>shutdown -c 取消關機</li>
+<li>super user才可以使用</li>
+<li>不是super user，可以使用sudo 後，輸入root密碼也可以使用。</li>
+</ul>
+<h3 id="reboot">reboot</h3>
+<ul>
+<li>系統馬上重新啟動</li>
+<li>通常會確認線上沒有人之後，才去reboot</li>
+<li>super user才可以使用</li>
+<li>不是super user，可以使用sudo 後，輸入root密碼也可以使用。</li>
+</ul>
+<h2 id="linux-根目錄-下的主要目錄">linux 根目錄 下的主要目錄</h2>
+<blockquote>
+<ul>
+<li>d rwx r-x r-x.</li>
+<li>-rw-------</li>
+</ul>
+</blockquote>
+<ol>
+<li>第一個字 d 代表是directory 資料夾 ， - 代表是 file 檔案</li>
+<li>r : read    代表可不可以讀取</li>
+<li>w : write   代表可不可以寫入</li>
+<li>x : execute 代表可不可以執行</li>
+</ol>
+<h2 id="資料夾介紹">資料夾介紹</h2>
+<ul>
+<li>以下都為根目錄下的資料夾(/)</li>
+</ul>
+<ol>
+<li>/bin = Binary 就是機器碼的<code>執行檔案</code></li>
+<li>/sbin = super user可以用的<code>執行檔案</code>，都放在這裡面</li>
+<li>/etc = 所有系統設定檔，大都是純文字檔，只有系統管理員可以修改這些檔案</li>
+<li>/dev = 系統設備目錄。所有裝置與設備(device)</li>
+</ol>
+<ul>
+<li>linux對於硬體的部分，他會先把他歸納在一個檔案裡面，是一種特殊行的設備檔案ex : usb 光碟片。</li>
+</ul>
+<ol start="5">
+<li>/home = 一般使用者的家目錄(home directory)</li>
+<li>/root = 系統管理者(超級使用者，super user)root 的家目錄</li>
+<li>/usr = 套件軟體(package)，他們大都安裝於此</li>
+<li>/var = 變動性與系統等待排隊處理的檔案</li>
+</ol>
+<ul>
+<li>如果我們系統經常的對外服務，他會有一些像是log紀錄，誰來連線，誰登入失敗等等的紀錄檔</li>
+</ul>
+<ol start="9">
+<li>/opt = 放置非linux預設安裝的外來軟體，會放置在此</li>
+</ol>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">Jack Zhu</a>
+	
+	
+	
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
