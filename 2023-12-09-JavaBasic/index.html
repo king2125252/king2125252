@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Java 基本知識 | 
+	 
+	Jack&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="Jack&#39;s Blog" />
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href=".././favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="../index.html" class="logo">Jack's Blog</a>
+
+	<ul id="menu">
+    
+
+    
+
+    
+
+    
+      
+      
+        <li class="menu-item">
+          <a href='https://github.com/king2125252/Blog' class="menu-item-link" target="_blank">
+            Blog
+          </a>
+        </li>
+      
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/king2125252' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="../2023-11-15-LinuxCommand/">
+                     
+										    Linux 指令
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="">
+                     
+										    Java 基本知識
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="../2023-12-09-vscodeintro/">
+                     
+										    vscode 快捷鍵
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	Java 基本知識
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>Jack Zhu</span>
+	<span>2023-12-09 00:00:00</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+            
+                <span>
+                    <i class="fa fa-tag" aria-hidden="true">
+                    <a href="/tags/Java/">Java</a>
+                    </i>
+                </span>
+            
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<h2 id="Java-11個專業術語">Java 11個專業術語</h2>
+<ol>
+<li>Simple 簡單</li>
+<li>Object-Oriented 物件導向</li>
+<li>Network-savvy 具有網路功能的</li>
+<li>Robust 穩固的</li>
+<li>Secure 安全的</li>
+<li>Architecuture 結構中立(跨平台)</li>
+<li>Portable 可攜帶性的</li>
+<li>Interpreted 直譯</li>
+<li>Hight Performance 高效能</li>
+<li>Multithreading 多執行續</li>
+<li>Dynamic 動態</li>
+</ol>
+<h2 id="Java-重要名詞">Java 重要名詞</h2>
+<ul>
+<li>write once, run anywhere</li>
+</ul>
+<ol>
+<li>JDK : Java Development Kit 開發工具包
+<ol>
+<li>JDK裡包含了JRE，也包含JVM，函式庫，所以下載JDK即可</li>
+</ol>
+</li>
+<li>JVM : Java Virtual machine 虛擬機器
+<ol>
+<li>是Java能夠跨平台的關鍵(write once,run anywhere)</li>
+</ol>
+</li>
+<li>IDE : Integrated Development Environment 開發整合環境
+<ol>
+<li>Ex:eclipse IntelliJ IDEA</li>
+</ol>
+</li>
+<li>SDK : Software Development Kit 軟體開發工具
+<ol>
+<li>JDK就是一個SDK是Oracle提供給我們的一個Java的SDK</li>
+</ol>
+</li>
+</ol>
+<h2 id="Java-基本資料型態-Primitive-Type-初始值">Java 基本資料型態 Primitive Type &amp;初始值</h2>
+<ul>
+<li>又可區分 : 整數，浮點數，字元，布林型</li>
+<li>資料型態 小 -&gt; 大:</li>
+<li>byte → short → char → int → long → float → double</li>
+</ul>
+<pre><code class="language-java=">// 1. 資料轉換 小轉大：
+byte a = 100;
+int b = a; //這也可以 int b = (int)a;
+
+// 2. 資料轉換 大轉小 （強制轉換）
+int c = 100;
+byte d =(byte) c;
+
+// 3. 整數轉字串:
+int e = 100; 
+String f = Integer.toString(e);
+
+// 4. 字串轉整數:
+String i = &quot;100&quot;;
+int j = Integer.parseInt(i);
+</code></pre>
+<h2 id="Java-基本資料型態初值設定">Java 基本資料型態初值設定</h2>
+<p><img src="https://drive.google.com/u/2/uc?id=1ep5QY3n2aG20F-SwaVlAWKZaa6H70OVE&amp;export=download" alt=""></p>
+<h2 id="Java-編譯過程">Java 編譯過程</h2>
+<p><img src="https://drive.google.com/u/2/uc?id=1f4vlV0IqmKHa23XKvrhfJe16zpV2oyKI&amp;export=download" alt=""></p>
+<h2 id="運算子功能介紹">運算子功能介紹</h2>
+<ul>
+<li>運算子執行運算之後將<font color="red">回傳值</font>，而其回傳值型態是<font color="red">運算元而定</font></li>
+<li>以下運算子先後順序:<br>
+<img src="https://drive.google.com/u/2/uc?id=1eKZePf3GVqfSSYA4eyiC6AHS1rg__foo&amp;export=download" alt=""></li>
+</ul>
+<h3 id="算數運算">算數運算</h3>
+<p><img src="https://drive.google.com/u/2/uc?id=1egNWqV8qOHLXUN2PozMPqjkFXXuYFyhC&amp;export=download" alt=""></p>
+<h3 id="遞增遞減運算子">遞增遞減運算子</h3>
+<p><img src="https://drive.google.com/u/2/uc?id=1f3Ulmne7lupUWfbCqe3UqvFrSH4hlN7n&amp;export=download" alt=""></p>
+<ul>
+<li>後置型(a++)先<font color="red">取值再遞增</font>，前置型(++a)<font color="red">先遞增再取值</font></li>
+</ul>
+<h3 id="指定運算子">指定運算子</h3>
+<p><img src="https://drive.google.com/u/2/uc?id=1eNqaEqKwQnhP4asyOmEsBz9Y_4FvdeZb&amp;export=download" alt=""></p>
+<ul>
+<li>等號<font color=red>右值的位階</font>不可高於<font color=red>左邊的位階</font></li>
+<li>位階高低順序:double &gt; float &gt; long &gt; int &gt; short &gt; byte</li>
+</ul>
+<h3 id="關係運算子-Relational-operators">關係運算子(Relational operators)</h3>
+<ul>
+<li>關係運算子:用來<font color=red>比較兩個變數的值</font>，其回傳結果是一個<font color=red>布林值</font><br>
+<img src="https://drive.google.com/u/2/uc?id=1eM4SiBiVpkE_mP4wG_emU_iXJ0x-BEu_&amp;export=download" alt=""></li>
+</ul>
+<h3 id="條件運算子-Conditional-operators">條件運算子(Conditional operators)</h3>
+<ul>
+<li>是將兩個布林值合併起來的運算子，運算結果仍為布林值</li>
+<li><font color=red>請使用2個 &amp; | 進行合併，因為Java運算時會以短路運算的邏輯進行</font><br>
+<img src="https://drive.google.com/u/2/uc?id=1ee95zGWvZF0nOwpa9hcb5sn40QNu2_Ox&amp;export=download" alt=""></li>
+</ul>
+<h3 id="三元運算子-Ternary-operators">三元運算子(Ternary operators)</h3>
+<ul>
+<li>是一個簡略的if-else敘述式<br>
+<img src="https://drive.google.com/u/2/uc?id=1e77q9nIgFP7JREzqvcxaTXegWQjxYjzR&amp;export=download" alt=""></li>
+</ul>
+<h3 id="位元運算子-Bit-operators">位元運算子(Bit operators)</h3>
+<ul>
+<li>&amp;(and) | (or) ^(xor)互斥 可用在整數的位元</li>
+<li>~(位元反轉運算子):用於整數 將位元1變成0，0變成1<br>
+<img src="https://drive.google.com/u/2/uc?id=1eCy_NuDOrV2eE9d4mRMUMgQkWNo7Xn8o&amp;export=download" alt=""></li>
+</ul>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="../2023-12-09-vscodeintro/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  vscode 快捷鍵
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="../2023-11-15-LinuxCommand/">
+                Linux 指令
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+<script src="../js/main.js"></script>
+<link rel="stylesheet" href="../css/main.css">
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start"></span>-<span id="footerYear-end"></span>
+
+	
+	    <a href="/">Jack Zhu</a>
+	
+	
+	
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-start').innerHTML = new Date().getFullYear() + '';
+</script>
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
